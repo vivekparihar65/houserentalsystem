@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".dashboard"
+    android:background="@color/white"
+    style="@style/Theme.MaterialComponents">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/house2">
+
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|center"
+                        android:fontFamily="@font/aclonica"
+                        android:text="@string/newway"
+                        android:textAllCaps="true"
+                        android:textColor="@color/red"
+                        android:textCursorDrawable="@color/red"
+                        android:textSize="24sp" />
+
+                    <Spinner
+                        android:id="@+id/spinnercities"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|right"
+                        android:background="@drawable/spinner_bg"
+                        android:entries="@array/cities"
+                        android:spinnerMode="dropdown" />
+                </com.google.android.material.card.MaterialCardView>
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/audiowide"
+                android:text="Property for"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButtonToggleGroup
+                    android:id="@+id/togglegroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/customborder"
+                    app:selectionRequired="true"
+                    app:singleSelection="true">
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnstudent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:text="Student"
+                        app:icon="@drawable/stud"
+                        app:iconGravity="textTop"
+
+
+                        />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnfamily"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="@color/white"
+                        android:drawableTop="@drawable/family2"
+                        android:text="Family"
+                        android:textSize="14sp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnmale"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:drawableTop="@drawable/man"
+                        android:text="work"
+                        android:textSize="14sp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnfemale"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:drawableTop="@drawable/female"
+                        android:text="work"
+                        android:textSize="14sp" />
+
+
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/black_overlay"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="5dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/audiowide"
+                android:text="Property type"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/customborder"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="75dp"
+                    android:layout_marginEnd="10dp"
+                    >
+
+                    <com.google.android.material.button.MaterialButtonToggleGroup
+                        android:id="@+id/togglegroup2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:selectionRequired="true"
+                        app:singleSelection="true">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnroom"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/white"
+                            android:text="Room"
+                            android:textSize="24sp"
+                            app:icon="@drawable/room"
+                            app:iconGravity="textTop"
+
+                            />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnflat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/white"
+                            android:text="Flat"
+
+                            android:textSize="24sp"
+                            app:icon="@drawable/ic_baseline_house_siding_24"
+                            app:iconGravity="textTop"
+
+                            />
+
+
+                    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                </FrameLayout>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/black_overlay"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="10dp"/>
+            <Button
+                android:id="@+id/btnsearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                android:textAllCaps="true"
+                android:backgroundTintMode="@color/white"
+                android:fontFamily="@font/audiowide"
+                android:textColor="@color/black"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/line"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:contextClickable="true"
+                android:textSize="25sp"
+
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ghar"
+                        android:background="@color/white"
+                        android:layout_margin="15dp"
+                        android:backgroundTint="@color/white"
+                        />
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Do you have a property for rent?"
+                        android:textSize="24sp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_gravity="center|top"
+                        />
+
+                    <TextView
+                        android:id="@+id/pstprpty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginStart="10dp"
+                        android:contextClickable="true"
+                        android:outlineAmbientShadowColor="@color/black"
+                        android:fontFamily="@font/audiowide"
+                        android:padding="15dp"
+                        android:text="@string/pstprty"
+                        android:textColor="@color/red"
+                        android:textSize="25sp" />
+                </com.google.android.material.card.MaterialCardView>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/black_overlay"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="#E9FF06"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_margin="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|top"
+                    android:fontFamily="@font/audiowide"
+                    android:text="Invite your friends"
+                    android:textColor="@color/black"
+                    android:textSize="24sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingStart="30dp">
+
+                    <ImageButton
+                        android:id="@+id/imgbtnfb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:background="#E9FF06"
+                        android:onClick="facebook"
+
+                        android:contextClickable="true"
+                        android:src="@mipmap/facebook" />
+
+                    <ImageButton
+                        android:id="@+id/imgbtnig"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:background="#E9FF06"
+                        android:onClick="instagram"
+                        android:contextClickable="true"
+                        android:src="@mipmap/instagram" />
+
+                    <ImageButton
+                        android:id="@+id/imgbtnwhat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:background="#E9FF06"
+                        android:onClick="whatsapp"
+                        android:contextClickable="true"
+                        android:src="@mipmap/whatsapp" />
+
+                    <ImageButton
+                        android:id="@+id/imgbtntwit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:background="#E9FF06"
+                        android:onClick="twitter"
+                        android:contextClickable="true"
+                        android:src="@mipmap/twitter" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/tp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+<com.google.android.material.bottomnavigation.BottomNavigationView
+   android:id="@+id/btmnav_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:menu="@menu/bottom_nav_menu"
+    android:layout_gravity="bottom"
+
+    app:labelVisibilityMode="labeled"/>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

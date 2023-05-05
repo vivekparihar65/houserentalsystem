@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout   xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".room"
+    android:orientation="vertical"
+    android:background="@color/white"
+    style="@style/Theme.MaterialComponents">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/choosebtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Upload your Room image"
+                    android:textSize="24sp"
+                    android:fontFamily="@font/audiowide"
+                    android:textColor="@color/black"
+
+                    android:backgroundTint="@color/white"
+                    android:layout_marginTop="10dp"
+                    android:layout_margin="15dp"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:id="@+id/uploadimg"
+                    android:layout_height="wrap_content"
+                    android:scaleType="center"
+                    android:layout_margin="15dp"
+
+                    android:padding="20dp"
+                    />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="You can't upload the flat details here *"
+                android:textColor="@color/red"
+                android:layout_marginStart="15dp"
+                android:drawableStart="@drawable/error"
+                android:paddingStart="10dp"
+                android:textStyle="italic"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Type : "
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/audiowide"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:background="@drawable/customborder">
+                    <CheckBox
+                        android:id="@+id/typeroom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:fontFamily="@font/audiowide"
+                        android:paddingStart="5dp"
+                        android:text="ROOM"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:paddingLeft="15dp"
+                        android:layout_marginStart="45dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/black_overlay"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seeking a :"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/audiowide"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                   android:padding="5dp"
+                    android:background="@drawable/customborder">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <CheckBox
+                            android:id="@+id/chkstudent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="23dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="21dp"
+                            android:fontFamily="@font/audiowide"
+                            android:paddingStart="5dp"
+                            android:text="Student"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            />
+
+                        <CheckBox
+                            android:id="@+id/chkfamily"
+                            android:layout_width="wrap_content"
+                            android:layout_height="23dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="19dp"
+                            android:layout_marginEnd="99dp"
+                            android:fontFamily="@font/audiowide"
+                            android:text="Family"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="23dp"
+                            android:layout_below="@id/chkstudent"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="27dp"
+
+                            android:layout_marginEnd="22dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_toStartOf="@+id/chkworkingmale"
+                            android:fontFamily="@font/audiowide"
+                            android:text="Working Male"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+
+                        <CheckBox
+                            android:id="@+id/chkworkingmale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="23dp"
+                            android:layout_below="@+id/chkfamily"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="27dp"
+                            android:layout_marginEnd="16dp"
+                            android:text="Working Female"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/audiowide"
+                            android:textSize="15sp"/>
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/black_overlay"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+               />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment : "
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/audiowide"/>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:background="@drawable/customborder"
+               android:layout_margin="15dp">
+               <com.google.android.material.textfield.TextInputLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="15dp"
+                   >
+                   <com.google.android.material.textfield.TextInputEditText
+                       android:id="@+id/txtmrent"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:background="@color/white"
+                       android:text="Monthly Rent"
+                       android:drawableStart="@drawable/rupees"
+
+                       android:layout_gravity="center"
+                       android:paddingStart="10dp"
+                       android:textColor="@color/black_overlay"/>
+
+
+               </com.google.android.material.textfield.TextInputLayout>
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="15dp"
+                   android:layout_marginBottom="15dp"
+                   >
+                   <com.google.android.material.textfield.TextInputEditText
+                      android:id="@+id/txtsecurity"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:background="@color/white"
+                       android:text="Security"
+                       android:drawableStart="@drawable/rupees"
+                        android:fontFamily="@font/audiowide"
+                       android:gravity="center"
+                       android:textColor="@color/black_overlay"/>
+
+
+               </com.google.android.material.textfield.TextInputLayout>
+
+           </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/black_overlay"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sharing type : "
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/audiowide"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/customborder">
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
+                    <RadioButton
+                        android:id="@+id/btnshare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Shareable"
+
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/audiowide"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/btnnonshare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="non-Shareable"
+
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:layout_marginStart="35dp"
+                        android:fontFamily="@font/audiowide"
+                        />
+                </RadioGroup>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/black_overlay"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Find My Room Here : "
+                    android:textSize="25sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/audiowide"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/customborder">
+
+                    <Spinner
+                        android:id="@+id/spinnercities2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:paddingStart="125dp"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginEnd="25dp"
+                        android:background="@drawable/spinner_bg"
+                        android:entries="@array/cities"
+                        android:gravity="center"
+                        android:spinnerMode="dropdown"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="1dp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/black_overlay"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/customborder"
+                android:orientation="vertical">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Pin code"
+                    android:fontFamily="@font/audiowide"
+                    android:textColorHint="@color/black_overlay"
+                    android:textSize="20sp"
+                    android:inputType="number"
+                    android:paddingStart="10dp"
+
+                   />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Room number"
+                    android:fontFamily="@font/audiowide"
+                    android:textColorHint="@color/black_overlay"
+                    android:textSize="20sp"
+                    android:inputType="number"
+                    android:paddingStart="10dp"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Area,Colony,Street,Sector,Village"
+                    android:fontFamily="@font/audiowide"
+                    android:textColorHint="@color/black_overlay"
+                    android:textSize="20sp"
+                    android:inputType="number"
+                    android:paddingStart="10dp"
+
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Landmark(Optional)"
+                    android:fontFamily="@font/audiowide"
+                    android:textColorHint="@color/black_overlay"
+                    android:textSize="20sp"
+                    android:inputType="number"
+                    android:paddingStart="10dp"
+
+                    />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/black_overlay"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                />
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/location"
+                android:layout_margin="15dp"
+                android:textAlignment="center"
+                android:background="@drawable/line"
+                android:backgroundTint="@color/black_overlay"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/black_overlay"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Contact Details : "
+                android:layout_marginBottom="5dp"
+                android:textSize="25sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/audiowide"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="15dp"
+                android:background="@drawable/customborder">
+                <EditText
+                    android:id="@+id/etContactName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:hint="Your Name"
+                    android:fontFamily="@font/audiowide"
+                    android:textColorHint="@color/black"
+                    android:textSize="20sp"
+                    android:drawableStart="@drawable/username"/>
+
+                <EditText
+                    android:id="@+id/etContactNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:hint="Contact Number"
+                    android:fontFamily="@font/audiowide"
+                    android:textColorHint="@color/black"
+                    android:textSize="20sp"
+                    android:inputType="phone"
+                    android:drawableStart="@drawable/phone"/>
+
+                <EditText
+                    android:id="@+id/etContactEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:hint="Email"
+                    android:drawableStart="@drawable/email"
+                    android:inputType="textEmailAddress"
+                    android:fontFamily="@font/audiowide"
+                    android:textColorHint="@color/black"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/black_overlay"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/btnpstad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Post Ad"
+                    android:textAllCaps="true"
+                    android:backgroundTintMode="@color/white"
+                    android:fontFamily="@font/audiowide"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/line"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="25sp"
+
+                    />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/black_overlay"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="70dp"
+                />
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btmnav_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_nav_menu"
+        android:layout_gravity="bottom"
+
+        app:labelVisibilityMode="labeled"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

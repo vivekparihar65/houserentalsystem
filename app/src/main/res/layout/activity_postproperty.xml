@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".postproperty"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ghar"
+        android:background="@color/white"
+        android:layout_margin="15dp"
+        android:backgroundTint="@color/white"
+
+        />
+
+        <Button
+            android:id="@+id/btnroom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Room"
+            android:textAllCaps="true"
+            android:fontFamily="@font/audiowide"
+            android:textSize="24sp"
+            android:drawableRight="@drawable/ic_arrow"
+            android:layout_margin="15dp"
+            android:contextClickable="true"/>
+    <Button
+        android:id="@+id/btnflat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Flat"
+        android:textAllCaps="true"
+        android:fontFamily="@font/audiowide"
+        android:textSize="24sp"
+        android:drawableRight="@drawable/ic_arrow"
+        android:layout_margin="15dp"
+        android:contextClickable="true"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:visibility="invisible"/>
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/btnhome"
+        android:title="Home"
+        android:enabled="true"
+        android:icon="@drawable/home_24"/>
+    <item
+        android:id="@+id/btnprofile"
+        android:title="Profile"
+        android:enabled="true"
+        android:icon="@drawable/person_24"/>
+
+        <item android:id="@+id/btnpost"
+            android:title="Post ad "
+            android:icon="@drawable/add_24"
+            android:enabled="true"/>
+        <item
+            android:id="@+id/btnMyPosts"
+            android:icon="@drawable/posts"
+            android:enabled="true"
+            android:title="My Posts"/>
+    <item
+        android:id="@+id/btnexit"
+        android:title="Exit"
+        android:enabled="true"
+        android:icon="@drawable/exit"/>
+</menu>
